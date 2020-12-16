@@ -1,0 +1,13 @@
+{
+  "name": "connect-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@bullhorn/connect": "^1.0.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1"
+  }
+}

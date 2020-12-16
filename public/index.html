@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <script type="text/javascript" src="/lib/post-robot/post-robot.min.js"></script>
+  <script type="application/javascript" src="/lib/connect/index.umd.js"></script>
+</head>
+
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+  <a href="javascript:goHome()">Go Home</a>
+  <a href="javascript:goBack()">Go Back</a>
+  <iframe src="/iframe.html" id="iframeWrapper"></iframe>
+
+<script type="application/javascript">
+  window.addEventListener('DOMContentLoaded', function() {
+    window.bridge = new bhconnect.AppBridge();
+    window.bridge.handle(6, function(packet, windowName) {
+      console.log(packet.title);
+    });
+  });
+
+  function goHome() {
+    window.bridge.fireEventToChild(document.getElementById('iframeWrapper'), "GO_HOME");
+  }
+
+  function goBack() {
+    window.bridge.fireEventToChild(document.getElementById('iframeWrapper'), "GO_BACK");
+  }
+</script>
+</body>
+
+</html>
