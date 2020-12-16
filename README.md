@@ -1,4 +1,4 @@
-##Bullhorn Connect Sample Project
+## Bullhorn Connect Sample Project
 
 This is a sample project for using Bullhorn AppBridge to communicate between Bullhorn ATS and an Iframe.
 
